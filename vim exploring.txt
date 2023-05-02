@@ -1,0 +1,43 @@
+Movement:
+h is left
+j is down
+k is up
+l is right
+
+Going to insert mode:
+i is insert to left of cursor
+I insert before non blank character on line
+a is to the right of cursor
+A insert at end of line
+o begin new line below current line
+O new line above
+gl insert a column at line 1
+gi insert a column where insert mode was stopped
+
+Modifying text
+d is modifer to delete something ()
+dw delete word
+d$ delete to end of line
+
+Motions:
+w go to next word
+e go to end of word
+$ to end of line including last character
+
+Deleting:
+dd delete line
+dw until start of the next work, excluding first character
+de to the including last character
+d$ delete till end of line
+
+Undo and redo:
+u is Undo
+ctrl R is redo
+
+Put command:
+p (paste) puts (pastes) after the cursor
+P (paste) puts (pastes)
+
+change:
+c change til whenever
+c$ change and go to insert mode
