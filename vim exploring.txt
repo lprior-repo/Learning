@@ -4,9 +4,12 @@ j is down
 k is up
 l is right
 
+Dot command
+. repeat last action
+
 Going to insert mode:
 i is insert to left of cursor
-I insert before non blank character on line
+I insert b`efore non blank character on line
 a is to the right of cursor
 A insert at end of line
 o begin new line below current line
@@ -18,14 +21,21 @@ Modifying text
 d is modifer to delete something ()
 dw delete word
 d$ delete to end of line
+daw delete a word
+dap delete a paragraph
 
 Motions:
 w go to next word
+W go to next word by spaces
 e go to end of word
+E go to end of word by spaces
+b go to previous word
+B go to previous word by spaces
 $ to end of line including last character
-
+0 to start of line^
 Deleting:
 dd delete line
+daw delete a word then use .
 dw until start of the next work, excluding first character
 de to the including last character
 d$ delete till end of line
@@ -36,8 +46,46 @@ ctrl R is redo
 
 Put command:
 p (paste) puts (pastes) after the cursor
-P (paste) puts (pastes)
+P (paste) pijjjjuts (pastes)
 
 change:
-c change til whenever
-c$ change and go to insert mode
+Used to delete text and put in insert mode
+c$ change and go to insert mode C is a shortcut for c$
+general(excellent use case for . )
+gg go to start of file
+upper G go to end of file
+cw change word
+ci( change inside paran
+
+Moving the screen
+ctrl-u or ctrl-d move down or down a screen
+ctrl-f (forward) move half a screen
+ctrl-b (move half a screen right)
+
+Coding Specific
+% go to nearest closing paran
+
+g~ swap case
+gu lower case
+gU upper case
+> shift right(excellent use case for . )
+< shift left (excellent use case for . )
+= auto indent
+
+) move forward 1 sentence
+( move back 1 sentence
+} move forward 1 paragraph
+{ move back 1 paragraph
+
+ctrl e scroll down
+ctrl y scroll up
+
+H go to top of screen
+M go to middle of screen
+L go to bottom of screen
+
+
+ctrl u move up half a screen
+ctrl d move down half a screen
+ctrl b move back a screen
+ctrl f move forward a screen
