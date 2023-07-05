@@ -14,7 +14,9 @@ a is to the right of cursor
 A insert at end of line
 o begin new line below current line
 O new line above
+gk move cursor up (multi line text)
 gl insert a column at line 1
+gj move cursor down (multi line text)
 gi insert a column where insert mode was stopped
 
 Modifying text
@@ -33,6 +35,17 @@ b go to previous word
 B go to previous word by spaces
 $ to end of line including last character
 0 to start of line^
+
+WORDS by spaces are particularly helpful to us programmers because code often has a lot of them
+e to jump to the end of a word
+ge to jump to the end of the previous word
+
+I need to leverage captial E,W
+```
+this is a WORD: Iam_A_WORD
+this function call sum(2,3) is also a WORD
+this array [1,2,3,4,5] is a WORD as well
+
 Deleting:
 dd delete line
 daw delete a word then use .
@@ -40,13 +53,41 @@ dw until start of the next work, excluding first character
 de to the including last character
 d$ delete till end of line
 
+
 Undo and redo:
 u is Undo
 ctrl R is redo
 
 Put command:
 p (paste) puts (pastes) after the cursor
-P (paste) pijjjjuts (pastes)
+P (paste) (pastes)
+
+Find character:
+f to move to next occurance of a character in a line
+F to find previous occurance of a character
+example f(
+
+Find continued:
+; to go to the next occurance 
+, to go the previous one
+
+t character to move the cursor just before the next occurance of a character 
+T do the same but backwards
+
+Moving vertically
+{ jumps entire paragraphs downwards
+} jumps entire paragrapsh upwards
+
+Find search forwards or backwards
+/ <insert text> forward
+? <insert text> backwards 
+
+n to go to next match
+N to to go the previous match
+? will change the pattern of the search
+example: /n 
+
+% jump to opening and closing ({[]})
 
 change:
 Used to delete text and put in insert mode
@@ -84,8 +125,10 @@ H go to top of screen
 M go to middle of screen
 L go to bottom of screen
 
-
 ctrl u move up half a screen
 ctrl d move down half a screen
 ctrl b move back a screen
 ctrl f move forward a screen
+
+ctrl h delete back one character
+
